@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <header id="header">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Teste seus conhecimentos </title>
+        <link rel="stylesheet" href="../ap03/css1.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            var quiztitle = "Teste aqui seus conhecimentos sobre a pandemia de COVID-19";
+            var quiz = [{
+                    "question": "Pergunta 01: O que é COVID-19?",
+                    "choices": [
+                        "É uma doença causada pelo coronavírus, denominado SARS-CoV-2",
+                        "É uma doença causada pelo coronavírus, denominado SARS-CoV",
+                        "É uma doença causada pelo coronavírus, denominado 2019-nCoV",
+                        "É uma doença causada pelo coronavírus, denominado MERS-CoV"
+                    ],
+                    "correct": "É uma doença causada pelo coronavírus, denominado SARS-CoV-2",
+                    "explanation": "É uma doença causada pelo coronavírus, denominado SARS-CoV-2.",
+                }, {
+                    "question": "Pergunta 02: Como é transmitido o COVID-19?",
+                    "choices": [
+                        "É transmitido pelo Ar.",
+                        "É transmitido por Animais",
+                        "É transmitido pela Água",
+                        "É transmitido por contato com outra pessoa que já tenha o vírus"
+                    ],
+                    "correct": "É transmitido por contato com outra pessoa que já tenha o vírus",
+                    "explanation": "É transmitido por contato com outra pessoa que já tenha o vírus",
+                }, {
+                    "question": "Pergunta 03: Quais são os sintomas mais comuns do COVID-19?",
+                    "choices": [
+                        "Dor nas costas e lombar.",
+                        "Variar de um resfriado, sensação febril ou febre associada a dor de garganta, dor de cabeça, tosse, coriza) até uma pneumonia severa.",
+                        "Dor nos olhos e na cabeça.",
+                        "Diarreia e dor abdominal."
+                    ],
+                    "correct": "Variar de um resfriado, sensação febril ou febre associada a dor de garganta, dor de cabeça, tosse, coriza) até uma pneumonia severa.",
+                    "explanation": "Variar de um resfriado, sensação febril ou febre associada a dor de garganta, dor de cabeça, tosse, coriza) até uma pneumonia severa.",
+                }, {
+                    "question": "Pergunta 04: Quem está mais vulnerável à COVID-19? ",
+                    "choices": [
+                        "Bebês e Crianças até 10 anos de idade",
+                        "Gestantes",
+                        "Adultos entre 35 a 45 Anos",
+                        "Pessoas idosas e pessoas com condições médicas pré-existentes (como pressão alta, doenças cardíacas, doenças pulmonares, câncer ou diabete)"
+                    ],
+                    "correct": "Pessoas idosas e pessoas com condições médicas pré-existentes (como pressão alta, doenças cardíacas, doenças pulmonares, câncer ou diabete)",
+                    "explanation": "Pessoas idosas e pessoas com condições médicas pré-existentes (como pressão alta, doenças cardíacas, doenças pulmonares, câncer ou diabete)",
+                }, {
+                    "question": "Pergunta 05: Quais as complicações mais comuns do coronavírus?",
+                    "choices": [
+                        "Síndrome Respiratória Aguda Grave – SRAG – Correta",
+                        "Síndrome Gripal.",
+                        "Surto de H1N1.",
+                        "Síndrome respiratória do Oriente Médio (mers)"
+                    ],
+                    "correct": "Síndrome Respiratória Aguda Grave – SRAG – Correta",
+                    "explanation": "SSíndrome Respiratória Aguda Grave – SRAG – Correta",
+                }, {
+                    "question": "Pergunta 06: Como deve ser feito o período de quarentena, em casa, caso comece a apresentar os sintomas?",
+                    "choices": [
+                        "Deve ser um período de isolamento domiciliar, evitando contato também com os outros moradores da casa, especialmente se forem idosos ou pessoas com doenças crônicas",
+                        "Deve-se evitar dirigir veículos automotores, ou operar maquinas pesadas que exijam maior atenção.",
+                        "A cada 4 horas, a pessoa que apresenta os sintomas, deve fazer gargarejo com água morna, limão e sal.",
+                        "O paciente com sintomas deve higienizar a boca e garganta constantemente com antisséptico bucal, pois esse é capaz de matar o vírus."
+                    ],
+                    "correct": "Deve ser um período de isolamento domiciliar, evitando contato também com os outros moradores da casa, especialmente se forem idosos ou pessoas com doenças crônicas",
+                    "explanation": "South Carolina came under attack when Confederate soldiers attacked Fort Sumter. The war lasted until April 9th 1865.",
+                }, {
+                    "question": "Pergunta 07: Qual é o tempo de incubação do novo coronavírus?                    ",
+                    "choices": [
+                        "De acordo com a Organização das Nações Unidas (ONU), o tempo de incubação do novo Corona vírus em seres humanos pode variar de 15 a 30 dias",
+                        "O tempo médio de incubação é variável de acordo com o paciente. Podendo este chegar a 2 meses",
+                        "O período varia de 2 a 5 dias, com o tratamento adequado, pode ser curado já no segundo dia.",
+                        "De acordo com a Organização Mundial da Saúde (OMS), no caso da Covid-19 esse intervalo varia de 1 a 14 dias, geralmente ficando em torno de 5 dias."
+                    ],
+                    "correct": "De acordo com a Organização Mundial da Saúde (OMS), no caso da Covid-19 esse intervalo varia de 1 a 14 dias, geralmente ficando em torno de 5 dias.",
+                    "explanation": "De acordo com a Organização Mundial da Saúde (OMS), no caso da Covid-19 esse intervalo varia de 1 a 14 dias, geralmente ficando em torno de 5 dias.",
+                }, {
+                    "question": "Pergunta 08: A cerca do uso de mascaras caseiras, podemos afirmar que:",
+                    "choices": [
+                        "A cerca do uso de mascaras caseiras, podemos afirmar que:",
+                        "O uso de máscaras deve ser evitado, pois as mesmas, acumulam resíduos respiratórios que propiciam a propagação do novo Corona vírus",
+                        "O uso de máscaras caseias pode ser eficiente, desde que, sejam fabricadas de acordo com as orientações do ministério da saúde. A prática ainda permite que, máscaras cirúrgicas ou N95 possam ser destinadas a profissionais de saúde, diante da demanda deficitária no mercado.",
+                        "A utilização de máscaras caseiras, não impede a disseminação de gotículas expelidas do nariz ou da boca do usuário no ambiente"
+                    ],
+                    "correct": "O uso de máscaras caseias pode ser eficiente, desde que, sejam fabricadas de acordo com as orientações do ministério da saúde. A prática ainda permite que, máscaras cirúrgicas ou N95 possam ser destinadas a profissionais de saúde, diante da demanda deficitária no mercado.",
+                    "explanation": "O uso de máscaras caseias pode ser eficiente, desde que, sejam fabricadas de acordo com as orientações do ministério da saúde. A prática ainda permite que, máscaras cirúrgicas ou N95 possam ser destinadas a profissionais de saúde, diante da demanda deficitária no mercado..",
+                }, {
+                    "question": "Pergunta 09: Por que a doença causada pelo novo vírus recebeu o nome de Covid-19?",
+                    "choices": [
+                        "Por ser essa a décima nona variação evolutiva do vírus, tendo sua história iniciada no ano 2000 com o Covid-01",
+                        "COVID significa Corona Virus Decade (Década do Coronavírus), enquanto “19” se refere a 2019, quando os primeiros casos conhecidos completaram 10 anos de descobertos",
+                        "COVID significa Corona Virus Disease (Doença do Coronavírus), enquanto “19” se refere a 2019, quando os primeiros casos foram divulgados",
+                        "Este é um nome exclusivamente científico, sem nenhuma referência relevante, fora dos laboratórios que descobriram o vírus"
+                    ],
+                    "correct": "COVID significa Corona Virus Disease (Doença do Coronavírus), enquanto “19” se refere a 2019, quando os primeiros casos foram divulgados",
+                    "explanation": "COVID significa Corona Virus Disease (Doença do Coronavírus), enquanto “19” se refere a 2019, quando os primeiros casos foram divulgados",
+                }, {
+                    "question": "Pergunta 10: Quanto tempo leva após a exposição à COVID-19 para desenvolver sintomas? ",
+                    "image": "",
+                    "choices": [
+                        "Os intomas são percebidos logo de imadiato",
+                        "O tempo entre a exposição à COVID-19 e o momento em que os sintomas começam (período de incubação) é geralmente de cinco a seis dias, mas pode variar de 1 a 14 dias.",
+                        "Em caso pacienes com COVID-19, não existem sintomas aparentes",
+                        "O paciente pode portar o virus por até 7 meses sem que os sintomas aparecam"
+                    ],
+                    "correct": "O tempo entre a exposição à COVID-19 e o momento em que os sintomas começam (período de incubação) é geralmente de cinco a seis dias, mas pode variar de 1 a 14 dias.",
+                    "explanation": "O tempo entre a exposição à COVID-19 e o momento em que os sintomas começam (período de incubação) é geralmente de cinco a seis dias, mas pode variar de 1 a 14 dias..",
+                },
+
+            ];
+
+            var currentquestion = 0,
+                score = 0,
+                submt = true,
+                picked;
+
+            jQuery(document).ready(function($) {
+                function htmlEncode(value) {
+                    return $(document.createElement('div')).text(value).html();
+                }
+
+                /**
+                 * 
+                 *
+                 * @param {choices} array
+                 */
+                function addChoices(choices) {
+                    if (typeof choices !== "undefined" && $.type(choices) == "array") {
+                        $('#choice-block').empty();
+                        for (var i = 0; i < choices.length; i++) {
+                            $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');
+                        }
+                    }
+                }
+
+                function nextQuestion() {
+                    submt = true;
+                    $('#explanation').empty();
+                    $('#question').text(quiz[currentquestion]['question']);
+                    $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+                    if (quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != "") {
+                        if ($('#question-image').length == 0) {
+                            $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                        } else {
+                            $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                        }
+                    } else {
+                        $('#question-image').remove();
+                    }
+                    addChoices(quiz[currentquestion]['choices']);
+                    setupButtons();
+                }
+
+                /**
+                 *
+                 *
+                 * @param {choice} number
+                 */
+                function processQuestion(choice) {
+                    if (quiz[currentquestion]['choices'][choice] == quiz[currentquestion]['correct']) {
+                        $('.choice').eq(choice).css({
+                            'background-color': '#50D943'
+                        });
+                        $('#explanation').html('<strong>Correto!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                        score++;
+                    } else {
+                        $('.choice').eq(choice).css({
+                            'background-color': '#D92623'
+                        });
+                        $('#explanation').html('<strong>Incorreto.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                    }
+                    currentquestion++;
+                    $('#submitbutton').html('Proxima Pergunta &raquo;').on('click', function() {
+                        if (currentquestion == quiz.length) {
+                            endQuiz();
+                        } else {
+                            $(this).text('Ver Resposta Correta').css({
+                                'color': '#222'
+                            }).off('click');
+                            nextQuestion();
+                        }
+                    })
+                }
+
+                function setupButtons() {
+                    $('.choice').on('mouseover', function() {
+                        $(this).css({
+                            'background-color': '#e1e1e1'
+                        });
+                    });
+                    $('.choice').on('mouseout', function() {
+                        $(this).css({
+                            'background-color': '#fff'
+                        });
+                    })
+                    $('.choice').on('click', function() {
+                        picked = $(this).attr('data-index');
+                        $('.choice').removeAttr('style').off('mouseout mouseover');
+                        $(this).css({
+                            'border-color': '#222',
+                            'font-weight': 700,
+                            'background-color': '#c1c1c1'
+                        });
+                        if (submt) {
+                            submt = false;
+                            $('#submitbutton').css({
+                                'color': '#000'
+                            }).on('click', function() {
+                                $('.choice').off('click');
+                                $(this).off('click');
+                                processQuestion(picked);
+                            });
+                        }
+                    })
+                }
+
+                function endQuiz() {
+                    $('#explanation').empty();
+                    $('#question').empty();
+                    $('#choice-block').empty();
+                    $('#submitbutton').remove();
+                    $('#question').text("Você acertou " + score + " de " + quiz.length + " perguntas.");
+                    $(document.createElement('h2')).css({
+                        'text-align': 'justify',
+                        'font-size': '8em'
+                    }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
+                }
+
+                function init() {
+
+                    if (typeof quiztitle !== "undefined" && $.type(quiztitle) === "string") {
+                        $(document.createElement('h1')).text(quiztitle).appendTo('#frame');
+                    } else {
+                        $(document.createElement('h1')).text("Quiz").appendTo('#frame');
+                    }
+
+                    if (typeof quiz !== "undefined" && $.type(quiz) === "array") {
+
+                        $(document.createElement('p')).addClass('pager').attr('id', 'pager').text('Questão 1 de ' + quiz.length).appendTo('#frame');
+
+                        $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+
+                        if (quiz[0].hasOwnProperty('image') && quiz[0]['image'] != "") {
+                            $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                        }
+                        $(document.createElement('p')).addClass('explanation').attr('id', 'explanation').html('&nbsp;').appendTo('#frame');
+
+                        $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+                        addChoices(quiz[0]['choices']);
+
+                        $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Verificar Resposta Correta').css({
+                            'font-weight': 700,
+                            'color': '#fffff',
+                            'padding': '30px 0'
+                        }).appendTo('#frame');
+
+                        setupButtons();
+                    }
+                }
+
+                init();
+            });
+        </script>
+
+
+
+        <body>
+            <div id="frame" role="content"></div>
+        </body>
+
+
+
+        <body>
+
+            <nav>
+                <div id="menu">
+                    <ul>
+                        <li><a href="principal.html">Home</a></li>
+                        <li><a href="about.html">Sobre o Coronavírus</a></li>
+                        <li>
+                            <a href="quiz.html" style="background-color: black">Bem vindo ao nosso quiz</a>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+
+                <div style="margin-left: 5%; margin-top: 2%">
+                    <a href="principal.html" class="btn bt_blue">Home</a>
+                    <a href="about.html" class="btn bt_blue">Saiba mais sobre a doença</a>
+                </div>
+                </form>
+                </section>
+
+
+        </body>
+
+</html>
